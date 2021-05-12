@@ -23,7 +23,7 @@ def add_show(request):
 def update_data(request, id):
     if request.method == 'POST':
         pi = User.objects.get(pk=id)
-        fm = EmployeeRegistration(request.PPOST, instance=pi)
+        fm = EmployeeRegistration(request.POST, instance=pi)
         if fm.is_valid():
             fm.save()
     else:
